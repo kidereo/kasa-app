@@ -12,3 +12,9 @@ web-build/
 
 # macOS
 .DS_Store
+
+#IDEs
+.vscode
+.idea
+.idea/workspace.xml.idea
+/.idea/workspace.xml.idea
