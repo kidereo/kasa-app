@@ -2,12 +2,14 @@ import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 
-import appStyles from "./app/config/appStyles";
+import globalStyles from "./app/config/appStyles";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={[appStyles.text, styles.text]}>Initial installation</Text>
+      <Text style={[globalStyles.typography.label, styles.text]}>
+        Initial installation of a very long text which will take forever to read
+      </Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -21,6 +23,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   text: {
-    color: appStyles.colours.primary,
+    color: globalStyles.colours.primary,
   },
 });
