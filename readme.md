@@ -11,3 +11,7 @@ Développeur d'application - JavaScript React
 ## About this project
 
 This project was bootstrapped with [Expo](https://expo.dev) and [create-expo-app](https://docs.expo.dev/get-started/create-a-new-app/).
+
+## Visuals
+
+![Welcome Screen](./app/assets/welcome-screen.jpeg "Welcome Screen")
