@@ -11,7 +11,7 @@ function Footer(props) {
         style={styles.image}
       />
       <Text style={[globalStyles.typography.body, styles.text]}>
-        © 2023 Kasa. All rights reserved
+        © 2023 Kasa. All rights reserved.
       </Text>
     </View>
   );
