@@ -1,4 +1,5 @@
 import { Platform } from "react-native";
+
 import appColours from "./appColours";
 import appFonts from "./appFonts";
 
@@ -38,5 +39,11 @@ export default {
     fontWeight: "400",
     fontFamily: Platform.OS === "android" ? appFonts.android : appFonts.ios,
     color: appColours.black,
+  },
+  footer: {
+    fontSize: 16,
+    fontWeight: "400",
+    fontFamily: Platform.OS === "android" ? appFonts.android : appFonts.ios,
+    color: appColours.white,
   },
 };

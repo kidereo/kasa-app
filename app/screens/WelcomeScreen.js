@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text, ImageBackground, Image } from "react-native";
-import Footer from "../components/footer/Footer";
+import AppButton from "../components/common/AppButton";
+import Footer from "../components/partials/Footer";
 
 import globalStyles from "../config/appStyles";
 
@@ -9,6 +10,7 @@ function WelcomeScreen(props) {
     <ImageBackground
       source={require("../assets/hero-home.jpg")}
       style={styles.background}
+      blurRadius={3}
     >
       <View style={styles.overlay}>
         <View style={styles.logoContainer}>
@@ -22,20 +24,14 @@ function WelcomeScreen(props) {
             Chez vous,{"\n"}partout et ailleurs
           </Text>
         </View>
-        <View style={styles.listingsButton}>
-          <Text
-            style={[globalStyles.typography.label, styles.listingsButtonLabel]}
-          >
-            Listings
-          </Text>
-        </View>
-        <View style={styles.aboutButton}>
-          <Text
-            style={[globalStyles.typography.label, styles.aboutButtonLabel]}
-          >
-            About
-          </Text>
-        </View>
+        <AppButton
+          title="Listings"
+          labelColor="white"
+          buttonColor="primary"
+          onPress={() => console.log("Listings Pressed")}
+        />
+        <AppButton title="About" onPress={() => console.log("About Pressed")} />
+
         <Footer />
       </View>
     </ImageBackground>
@@ -59,35 +55,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "flex-end",
   },
-  logoContainerLogo: { width: 210, height: 68 },
+  logoContainerLogo: { width: 140, height: 45 },
   LogoContainerText: {
     color: globalStyles.colours.white,
     textAlign: "center",
     marginTop: 30,
-  },
-  listingsButton: {
-    width: "90%",
-    height: 70,
-    backgroundColor: globalStyles.colours.primary,
-    borderRadius: 35,
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: 30,
-  },
-  listingsButtonLabel: {
-    color: globalStyles.colours.white,
-  },
-  aboutButton: {
-    width: "90%",
-    height: 70,
-    backgroundColor: globalStyles.colours.white,
-    borderRadius: 35,
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: 30,
-  },
-  aboutButtonLabel: {
-    color: globalStyles.colours.primary,
   },
 });
 

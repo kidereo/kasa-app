@@ -10,7 +10,7 @@ function Footer(props) {
         source={require("../../assets/logo-white.png")}
         style={styles.image}
       />
-      <Text style={[globalStyles.typography.body, styles.text]}>
+      <Text style={globalStyles.typography.footer}>
         © 2023 Kasa. All rights reserved.
       </Text>
     </View>
@@ -19,17 +19,15 @@ function Footer(props) {
 
 const styles = StyleSheet.create({
   container: {
+    flexDirection: "row",
     height: 60,
     width: "100%",
     backgroundColor: globalStyles.colours.black,
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
+    marginTop: 10,
   },
-  image: { height: 15, width: 45 },
-  text: {
-    color: globalStyles.colours.white,
-    fontSize: 12,
-  },
+  image: { height: 15, width: 45, marginLeft: 5, marginBottom: 5 },
 });
 
 export default Footer;

@@ -1,4 +1,4 @@
 export default {
-  ios: "Avenir",
+  ios: "Avenir Next",
   android: "Roboto",
 };
