@@ -26,7 +26,7 @@ export default {
   },
   label: {
     fontSize: 18,
-    lineHeight: 20,
+    //lineHeight: 20,
     fontWeight: "500",
     textTransform: "uppercase",
     fontFamily: Platform.OS === "android" ? appFonts.android : appFonts.ios,
