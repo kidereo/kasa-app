@@ -26,8 +26,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     marginTop: 10,
+    paddingHorizontal: 10,
   },
-  image: { height: 15, width: 45, marginLeft: 5, marginBottom: 5 },
+  image: { height: 15, width: 45, marginBottom: 5 },
 });
 
 export default Footer;
