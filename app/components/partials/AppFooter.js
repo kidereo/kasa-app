@@ -3,7 +3,7 @@ import { View, StyleSheet, Text, Image } from "react-native";
 
 import globalStyles from "../../config/appStyles";
 
-function Footer(props) {
+function AppFooter(props) {
   return (
     <View style={styles.container}>
       <Image
@@ -31,4 +31,4 @@ const styles = StyleSheet.create({
   image: { height: 15, width: 45, marginBottom: 5 },
 });
 
-export default Footer;
+export default AppFooter;

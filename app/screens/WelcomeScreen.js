@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text, ImageBackground, Image } from "react-native";
 import AppButton from "../components/common/AppButton";
-import Footer from "../components/partials/Footer";
+import AppFooter from "../components/partials/AppFooter";
 
 import globalStyles from "../config/appStyles";
 
@@ -32,7 +32,7 @@ function WelcomeScreen(props) {
         />
         <AppButton title="About" onPress={() => console.log("About Pressed")} />
 
-        <Footer />
+        <AppFooter />
       </View>
     </ImageBackground>
   );
