@@ -4,7 +4,7 @@ import { LinearGradient } from "expo-linear-gradient";
 
 import globalStyles from "../../config/appStyles";
 
-function Card({ title = null, image }) {
+function Card({ title = null, image = null }) {
   return (
     <ImageBackground source={image} style={styles.background}>
       <LinearGradient

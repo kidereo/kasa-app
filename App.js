@@ -14,8 +14,9 @@ import globalStyles from "./app/config/appStyles";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import AppButton from "./app/components/common/AppButton";
-import Card from "./app/components/partials/Card";
+import AppCard from "./app/components/partials/AppCard";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import AboutScreen from "./app/screens/AboutScreen";
 
 export default function App() {
   return (

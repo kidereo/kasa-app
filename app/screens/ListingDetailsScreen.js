@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { View, StyleSheet, Image, Text, ScrollView } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import globalStyles from "../config/appStyles";
 import AppFooter from "../components/partials/AppFooter";
@@ -34,7 +35,7 @@ function ListingDetailsScreen(props) {
   return (
     <ScrollView style={styles.container}>
       <AppHeader />
-      <View style={styles.contents}>
+      <View style={styles.contentsContainer}>
         <Image style={styles.image} source={{ uri: cover }} />
         <Text style={[globalStyles.typography.title, styles.title]}>
           {title}
@@ -67,6 +68,10 @@ function ListingDetailsScreen(props) {
             title="Equipments"
             content={equipments.map((element, index) => (
               <Text key={index}>
+                <MaterialCommunityIcons
+                  name="checkbox-marked-outline"
+                  size={20}
+                />
                 {element}
                 {"\n"}
               </Text>
@@ -81,7 +86,7 @@ function ListingDetailsScreen(props) {
 
 const styles = StyleSheet.create({
   container: {},
-  contents: {
+  contentsContainer: {
     paddingHorizontal: 10,
   },
   image: {
