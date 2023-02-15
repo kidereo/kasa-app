@@ -17,6 +17,7 @@ import AppButton from "./app/components/common/AppButton";
 import AppCard from "./app/components/partials/AppCard";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import AboutScreen from "./app/screens/AboutScreen";
+import AppCarousel from "./app/components/common/AppCarousel";
 
 export default function App() {
   return (
@@ -31,6 +32,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: globalStyles.colours.white,
     padding: 0,
-    paddingTop: 50,
   },
 });

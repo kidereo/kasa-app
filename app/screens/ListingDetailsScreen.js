@@ -8,12 +8,20 @@ import AppHeader from "../components/partials/AppHeader";
 import AppTag from "../components/common/AppTag";
 import AppRating from "../components/common/AppRating";
 import AppDropdown from "../components/common/AppDropdown";
+import AppCarousel from "../components/common/AppCarousel";
 
 const title = "Appartement cosy";
 const rating = "4";
 const location = "Ile de France - Paris 17e";
 const cover =
   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg";
+const pictures = [
+  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
+  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg",
+  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg",
+  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
+  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg",
+];
 const description =
   "Votre maison loin de chez vous. Que vous veniez de l'autre bout du monde, ou juste de quelques stations de RER, vous vous sentirez chez vous dans notre appartement.";
 const tags = ["Canal Saint Martin", "République", "Appartement"];
@@ -36,7 +44,8 @@ function ListingDetailsScreen(props) {
     <ScrollView style={styles.container}>
       <AppHeader />
       <View style={styles.contentsContainer}>
-        <Image style={styles.image} source={{ uri: cover }} />
+        {/* <Image style={styles.image} source={{ uri: pictures[1] }} /> */}
+        <AppCarousel images={pictures} />
         <Text style={[globalStyles.typography.title, styles.title]}>
           {title}
         </Text>
