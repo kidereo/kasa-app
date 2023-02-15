@@ -1,14 +1,23 @@
 import React from "react";
-import { View, StyleSheet, ImageBackground, Text } from "react-native";
+import {
+  View,
+  StyleSheet,
+  ImageBackground,
+  Text,
+  Dimensions,
+} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 import globalStyles from "../../config/appStyles";
 
+const { width } = Dimensions.get("window");
+const height = width * 0.7;
+
 function Card({ title = null, image = null }) {
   return (
-    <ImageBackground source={image} style={styles.background}>
+    <ImageBackground source={{ uri: image }} style={styles.background}>
       <LinearGradient
-        colors={["rgba(255,255,255,0)", "rgba(0,0,0,0.5)"]}
+        colors={["rgba(255,255,255,0)", "rgba(0,0,0,0.7)"]}
         style={styles.overlay}
       >
         <View style={styles.title}>
@@ -23,8 +32,7 @@ function Card({ title = null, image = null }) {
 
 const styles = StyleSheet.create({
   background: {
-    flex: 1,
-    height: 255,
+    height: height,
     backgroundColor: globalStyles.colours.primary,
     borderRadius: 10,
     overflow: "hidden",
@@ -41,7 +49,7 @@ const styles = StyleSheet.create({
     color: globalStyles.colours.white,
     marginBottom: 10,
     marginLeft: 10,
-    width: "70%",
+    width: "80%",
   },
 });
 

@@ -18,11 +18,14 @@ import AppCard from "./app/components/partials/AppCard";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import AboutScreen from "./app/screens/AboutScreen";
 import AppCarousel from "./app/components/common/AppCarousel";
+import ListingsScreen from "./app/screens/ListingsScreen";
+import AppHeader from "./app/components/partials/AppHeader";
+import AppFooter from "./app/components/partials/AppFooter";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <ListingDetailsScreen />
+      <ListingsScreen />
     </SafeAreaView>
   );
 }

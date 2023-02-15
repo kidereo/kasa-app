@@ -42,9 +42,8 @@ const host = {
 function ListingDetailsScreen(props) {
   return (
     <ScrollView style={styles.container}>
-      <AppHeader />
+      {/* <AppHeader /> */}
       <View style={styles.contentsContainer}>
-        {/* <Image style={styles.image} source={{ uri: pictures[1] }} /> */}
         <AppCarousel images={pictures} />
         <Text style={[globalStyles.typography.title, styles.title]}>
           {title}
@@ -97,11 +96,6 @@ const styles = StyleSheet.create({
   container: {},
   contentsContainer: {
     paddingHorizontal: 10,
-  },
-  image: {
-    width: "100%",
-    height: 255,
-    borderRadius: 10,
   },
   title: {
     paddingVertical: 10,

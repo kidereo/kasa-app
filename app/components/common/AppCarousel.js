@@ -4,11 +4,14 @@ import {
   StyleSheet,
   ScrollView,
   Image,
-  FlatList,
   Text,
+  Dimensions,
 } from "react-native";
 
 import globalStyles from "../../config/appStyles";
+
+const { width } = Dimensions.get("window");
+const height = width * 0.7;
 
 function AppCarousel({ images }) {
   return (
@@ -17,7 +20,6 @@ function AppCarousel({ images }) {
         <ScrollView
           horizontal={true}
           nestedScrollEnabled
-          pagingEnabled
           showsHorizontalScrollIndicator={true}
         >
           {images.map((image, index) => (
@@ -25,15 +27,6 @@ function AppCarousel({ images }) {
           ))}
         </ScrollView>
       ) : (
-        // <FlatList
-        //   data={images}
-        //   horizontal
-        //   renderItem={({ item, index }) => (
-        //     <View style={styles.container}>
-        //       <Image key={index} source={{ uri: item }} style={styles.image} />
-        //     </View>
-        //   )}
-        // />
         <Text style={[globalStyles.typography.body]}>No image available</Text>
       )}
     </View>
@@ -42,13 +35,19 @@ function AppCarousel({ images }) {
 
 const styles = StyleSheet.create({
   container: {
-    height: 255,
-    width: "100%",
+    height: height,
     borderRadius: 10,
     overflow: "hidden",
-    backgroundColor: globalStyles.colours.light,
+    backgroundColor: globalStyles.colours.white,
+    justifyContent: "center",
+    alignItems: "center",
   },
-  image: { height: 255, width: 355, borderRadius: 10 },
+  image: {
+    height: height,
+    width: width,
+    borderRadius: 10,
+    marginHorizontal: 4,
+  },
 });
 
 export default AppCarousel;

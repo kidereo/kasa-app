@@ -31,7 +31,6 @@ function WelcomeScreen(props) {
           onPress={() => console.log("Listings Pressed")}
         />
         <AppButton title="About" onPress={() => console.log("About Pressed")} />
-
         <AppFooter />
       </View>
     </ImageBackground>
