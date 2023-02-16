@@ -18,3 +18,10 @@ This project was bootstrapped with [Expo](https://expo.dev) and [create-expo-app
 ![Listings Screen](./visuals/listings-screen.png "Listings Screen")
 ![Listing Detail Screen](./visuals/listing-detail-screen.png "Listing Detail Screen")
 ![About Screen](./visuals/about-screen.png "About Screen")
+
+## Installation
+
+1. Clone the repository: `https://github.com/kidereo/kasa-app.git`.
+2. Use Terminal to navigate to your local repo folder. Once there, install dependencies: `npm install`.
+3. Launch the project with `npm run start`.
+4. Use [Expo Go client](https://expo.dev/client) on your mobile to test drove the Kasa app.
