@@ -1,31 +1,33 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import {
-  StyleSheet,
-  View,
-  SafeAreaView,
-  TouchableOpacity,
-  Text,
-  ScrollView,
-} from "react-native";
+import { StyleSheet, SafeAreaView } from "react-native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from "@react-navigation/native";
 
 import globalStyles from "./app/config/appStyles";
+import appNavigationTheme from "./app/navigation/navigationTheme";
+import AppNavigator from "./app/navigation/AppNavigator";
 
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
-import AppButton from "./app/components/common/AppButton";
-import AppCard from "./app/components/partials/AppCard";
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
-import AboutScreen from "./app/screens/AboutScreen";
-import AppCarousel from "./app/components/common/AppCarousel";
-import ListingsScreen from "./app/screens/ListingsScreen";
-import AppHeader from "./app/components/partials/AppHeader";
-import AppFooter from "./app/components/partials/AppFooter";
+const Stack = createNativeStackNavigator();
+const StackNavigator = () => {
+  return (
+    <Stack.Navigator initialRouteName="Tweets">
+      <Stack.Screen name="Tweets" component={Tweets} />
+      <Stack.Screen
+        name="TweetDetails"
+        component={TweetDetails}
+        options={{ title: "Tweet Details" }}
+      />
+    </Stack.Navigator>
+  );
+};
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <ListingsScreen />
+      <NavigationContainer theme={appNavigationTheme}>
+        <AppNavigator />
+      </NavigationContainer>
     </SafeAreaView>
   );
 }

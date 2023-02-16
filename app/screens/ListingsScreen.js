@@ -2,19 +2,22 @@ import React from "react";
 import { View, StyleSheet, FlatList } from "react-native";
 
 import AppCard from "../components/partials/AppCard";
-import AppFooter from "../components/partials/AppFooter";
-import AppHeader from "../components/partials/AppHeader";
 
 import listings from "../data/data.json";
 
-function ListingsScreen(props) {
+function ListingsScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <FlatList
         data={listings}
         keyExtractor={(listing) => listing.id.toString()}
         renderItem={({ item }) => (
-          <AppCard title={item.title} image={item.cover} />
+          <AppCard
+            title={item.title}
+            image={item.cover}
+            rating={item.rating}
+            onPress={() => navigation.navigate("ListingDetails", item)}
+          />
         )}
       />
     </View>

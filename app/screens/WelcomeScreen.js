@@ -5,7 +5,7 @@ import AppFooter from "../components/partials/AppFooter";
 
 import globalStyles from "../config/appStyles";
 
-function WelcomeScreen(props) {
+function WelcomeScreen({ navigation }) {
   return (
     <ImageBackground
       source={require("../assets/hero-home.jpg")}
@@ -24,13 +24,13 @@ function WelcomeScreen(props) {
             Chez vous,{"\n"}partout et ailleurs
           </Text>
         </View>
-        <AppButton
+        {/* <AppButton
           title="Listings"
           labelColor="white"
           buttonColor="primary"
-          onPress={() => console.log("Listings Pressed")}
+          onPress={() => navigation.navigate("Listings")}
         />
-        <AppButton title="About" onPress={() => console.log("About Pressed")} />
+        <AppButton title="About" onPress={() => navigation.navigate("About")} /> */}
         <AppFooter />
       </View>
     </ImageBackground>

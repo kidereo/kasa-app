@@ -8,7 +8,7 @@ import appAbouts from "../config/appAbouts";
 function AboutScreen(props) {
   return (
     <ScrollView style={styles.container}>
-      <AppHeader />
+      {/* <AppHeader /> */}
       <View style={styles.contentContainer}>
         <ImageBackground
           source={require("../assets/hero-about.jpg")}

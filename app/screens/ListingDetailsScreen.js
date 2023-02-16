@@ -10,36 +10,20 @@ import AppRating from "../components/common/AppRating";
 import AppDropdown from "../components/common/AppDropdown";
 import AppCarousel from "../components/common/AppCarousel";
 
-const title = "Appartement cosy";
-const rating = "4";
-const location = "Ile de France - Paris 17e";
-const cover =
-  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg";
-const pictures = [
-  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
-  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg",
-  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg",
-  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
-  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg",
-];
-const description =
-  "Votre maison loin de chez vous. Que vous veniez de l'autre bout du monde, ou juste de quelques stations de RER, vous vous sentirez chez vous dans notre appartement.";
-const tags = ["Canal Saint Martin", "République", "Appartement"];
-const equipments = [
-  "Parking",
-  "Sèche Cheveux",
-  "Machine à laver",
-  "Wi-fi",
-  "Cuisine équipée",
-  "Télévision",
-];
-const host = {
-  name: "Nathalie Jean",
-  picture:
-    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg",
-};
+function ListingDetailsScreen({ route }) {
+  const listing = route.params;
 
-function ListingDetailsScreen(props) {
+  const {
+    pictures,
+    title,
+    rating,
+    description,
+    tags,
+    equipments,
+    host,
+    location,
+  } = listing;
+
   return (
     <ScrollView style={styles.container}>
       {/* <AppHeader /> */}
@@ -96,6 +80,7 @@ const styles = StyleSheet.create({
   container: {},
   contentsContainer: {
     paddingHorizontal: 10,
+    marginTop: 10,
   },
   title: {
     paddingVertical: 10,

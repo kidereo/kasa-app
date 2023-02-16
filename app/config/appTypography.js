@@ -48,9 +48,10 @@ export default {
     color: appColours.primary,
   },
   footer: {
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: "400",
     fontFamily: Platform.OS === "android" ? appFonts.android : appFonts.ios,
     color: appColours.white,
+    textAlign: "right",
   },
 };

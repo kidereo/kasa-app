@@ -8,14 +8,14 @@ function AppRating({ rating }) {
       {Array.from({ length: rating }, (element, index) => (
         <Image
           key={index}
-          source={require("../../assets/star-filled.jpg")}
+          source={require("../../assets/star-primary.png")}
           style={styles.image}
         />
       ))}
       {Array.from({ length: maxRating - rating }, (element, index) => (
         <Image
           key={index}
-          source={require("../../assets/star-empty.jpg")}
+          source={require("../../assets/star-medium.png")}
           style={styles.image}
         />
       ))}
